@@ -108,7 +108,7 @@ label= "SYM"                               ;
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp LBKT   &kp LBRC    &kp STAR   &kp RBRC    &kp RBKT      
                 &kp UNDER   &kp APOS    &kp DQT     &kp MINUS   &kp BSLH        &kp COLON  &kp LPAR    &kp AMPS   &kp RPAR    &kp BSLH  
     &kp TILDE   &none       &kp GRAVE   &kp PIPE    &kp PLUS    &none           &kp CARRET &kp LT      &kp EQUAL  &kp GT      &kp QMARK  &none
-                                        &trans      &trans      &tran           &trans      &trans      &trans      
+                                        &trans      &trans      &trans           &trans      &trans      &trans      
                         >;
                 };
 
