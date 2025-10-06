@@ -4,6 +4,8 @@
 BOARD := seeeduino_xiao_ble
 SHIELD_LEFT := totem_left
 SHIELD_RIGHT := totem_right
+SHIELD_LEFT_RESET := settings_reset
+SHIELD_RIGHT_RESET := settings_reset
 ZMK_APP := zmk/app
 BUILD_DIR := build
 CONFIG_DIR := $(shell pwd)/config
@@ -12,6 +14,8 @@ CONFIG_DIR := $(shell pwd)/config
 .PHONY: all left right clean help
 
 all: left right
+
+reset: reset-left reset-right
 
 left:
 	@echo "Building left half..."
@@ -22,6 +26,17 @@ right:
 	@echo "Building right half..."
 	cd $(ZMK_APP) && west build -d $(BUILD_DIR)/right -b $(BOARD) -- -DSHIELD=$(SHIELD_RIGHT) -DZMK_CONFIG="$(CONFIG_DIR)"
 	@echo "Right half built: $(ZMK_APP)/$(BUILD_DIR)/right/zephyr/zmk.uf2"
+
+reset-right:
+	@echo "Building right half..."
+	cd $(ZMK_APP) && west build -d $(BUILD_DIR)/right -b $(BOARD) -- -DSHIELD=$(SHIELD_RIGHT_RESET) -DZMK_CONFIG="$(CONFIG_DIR)"
+	@echo "Right half built: $(ZMK_APP)/$(BUILD_DIR)/right/zephyr/zmk.uf2"
+
+reset-left:
+	@echo "Building left half..."
+	cd $(ZMK_APP) && west build -d $(BUILD_DIR)/left -b $(BOARD) -- -DSHIELD=$(SHIELD_LEFT_RESET) -DZMK_CONFIG="$(CONFIG_DIR)"
+	@echo "Left half built: $(ZMK_APP)/$(BUILD_DIR)/left/zephyr/zmk.uf2"
+
 
 clean:
 	@echo "Cleaning build directories..."
