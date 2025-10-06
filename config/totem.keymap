@@ -107,7 +107,7 @@ label= "SYM"                               ;
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp LBKT   &kp LBRC    &kp STAR   &kp RBRC    &kp RBKT      
                 &kp UNDER   &kp APOS    &kp DQT     &kp MINUS   &kp BSLH        &kp COLON  &kp LPAR    &kp AMPS   &kp RPAR    &kp BSLH  
-    &kp TILDE   &none       &kp GRAVE   &kp PIPE    &kp PLUS    &none           &kp CARRET &kp LT      &kp EQUAL  &kp GT      &kp QMARK  &none
+    &kp TILDE   &none       &kp GRAVE   &kp PIPE    &kp PLUS    &none           &kp CARET &kp LT      &kp EQUAL  &kp GT      &kp QMARK  &none
                                         &trans      &trans      &trans           &trans      &trans      &trans      
                         >;
                 };
@@ -159,10 +159,12 @@ label= "NAV"                              ;
 
                 &none       &none       &none       &none       &none           &none       &kp PG_UP   &kp UP      &kp PG_DN   &none       
                 &none       &none       &none       &none       &none           &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     
-    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &none       &none           &none         
-                                        &trans      &trans      &trans          &trans       &trans       &trans      
+    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &none       &none           &none
+                                        &trans      &trans      &trans          &trans       &trans       &trans
                         >;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+        };
+};
