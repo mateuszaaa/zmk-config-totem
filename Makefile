@@ -21,11 +21,13 @@ left:
 	@echo "Building left half..."
 	cd $(ZMK_APP) && west build -d $(BUILD_DIR)/left -b $(BOARD) -- -DSHIELD=$(SHIELD_LEFT) -DZMK_CONFIG="$(CONFIG_DIR)"
 	@echo "Left half built: $(ZMK_APP)/$(BUILD_DIR)/left/zephyr/zmk.uf2"
+	cp $(ZMK_APP)/$(BUILD_DIR)/left/zephyr/zmk.uf2 left.uf2
 
 right:
 	@echo "Building right half..."
 	cd $(ZMK_APP) && west build -d $(BUILD_DIR)/right -b $(BOARD) -- -DSHIELD=$(SHIELD_RIGHT) -DZMK_CONFIG="$(CONFIG_DIR)"
 	@echo "Right half built: $(ZMK_APP)/$(BUILD_DIR)/right/zephyr/zmk.uf2"
+	cp $(ZMK_APP)/$(BUILD_DIR)/right/zephyr/zmk.uf2 right.uf2
 
 reset-right:
 	@echo "Building right half..."
@@ -42,6 +44,7 @@ clean:
 	@echo "Cleaning build directories..."
 	rm -rf $(ZMK_APP)/$(BUILD_DIR)/left
 	rm -rf $(ZMK_APP)/$(BUILD_DIR)/right
+	rm -rf left.uf2 right.uf2
 	@echo "Clean complete"
 
 help:
